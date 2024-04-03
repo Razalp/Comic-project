@@ -96,10 +96,11 @@ export const InfiniteMovingCards = ({
              backgroundImage: `url(${item.image})`,
              backgroundSize: "cover", 
              backgroundPosition: "center", 
+        
          }}
          key={item.name}
      >
-         {/* Your li content here */}
+
      
      
                  

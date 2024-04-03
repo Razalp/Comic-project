@@ -2,10 +2,8 @@
 
 import { InfiniteMovingCards } from "../../../componets/ui/infinite-moving-cards";
 import Image1 from './ComicImages/1.jpg'
-import Image2 from './ComicImages/2.jpg'
 import Image3 from './ComicImages/3.jpg'
 import Image4 from './ComicImages/4.jpg'
-import Image5 from './ComicImages/5.jpg'
 import Image6 from './ComicImages/6.avif'
 import Image7 from './ComicImages/7.jpg'
 
