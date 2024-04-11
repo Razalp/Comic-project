@@ -17,7 +17,7 @@ const Home = () => {
       
       </div>
    
-      <div className='flex justify-center'>
+      <div className=''>
   <LayoutGridDemo/>
       </div>
     </div>

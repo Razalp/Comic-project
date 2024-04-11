@@ -1,6 +1,0 @@
-"use strict";
-// index.ts
-function greet(name) {
-    return `Hello, ${name}!`;
-}
-console.log(greet("World"));

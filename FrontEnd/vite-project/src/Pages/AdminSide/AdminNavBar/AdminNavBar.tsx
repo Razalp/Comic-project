@@ -1,24 +1,22 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
+import AddModal from "../AddBook/AddModal";
 
-const NavBar = () => {
-  const navigate=useNavigate()
+const AdminNavBar = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     Swal.fire({
       title: 'Are you sure?',
       text: 'You will be logged out!',
-
       showCancelButton: true,
       confirmButtonColor: '#000',
       cancelButtonColor: '#000',
       confirmButtonText: 'Yes, logout!'
     }).then((result) => {
       if (result.isConfirmed) {
-        // Perform logout action here
-        // For demonstration, let's just alert
-
-        navigate('/')
+        navigate('/admin');
       }
     });
   };
@@ -33,6 +31,9 @@ const NavBar = () => {
         {/* Navigation items */}
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem> 
+          <AddModal></AddModal>
+        </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat" onClick={handleLogout}>
             Logout
@@ -43,4 +44,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default AdminNavBar;
