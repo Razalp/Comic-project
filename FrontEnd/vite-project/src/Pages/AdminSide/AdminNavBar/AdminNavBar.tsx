@@ -22,7 +22,7 @@ const AdminNavBar = () => {
   };
 
   return (
-    <Navbar className="bg-black">
+    <Navbar className="bg-black ">
       <NavbarBrand>
         <p className="font-bold text-inherit text-white">COS</p>
         <p className="font-bold text-inherit text-white">&nbsp;&nbsp;▷◁</p>

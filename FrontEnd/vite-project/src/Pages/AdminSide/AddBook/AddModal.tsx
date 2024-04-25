@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Input } from "@nextui-org/react";
 import axios from 'axios';
 
@@ -26,7 +26,7 @@ const AddModal = () => {
                 }
             });
 
-            const { pdfUrl } = response.data; // Assuming your server returns the URL of the uploaded PDF
+            const { pdfUrl } = response.data; 
             setUploadedPdfUrl(pdfUrl);
 
             setIsOpen(false);
@@ -35,6 +35,9 @@ const AddModal = () => {
             console.error(error);
         }
     };
+    useEffect(()=>{
+
+    },[handleAddBook])
 
     return (
         <>

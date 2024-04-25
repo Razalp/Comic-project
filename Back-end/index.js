@@ -6,10 +6,11 @@ import dotenv from 'dotenv';
 import adminRouter from './src/route/adminRoute/adminRouter.js'; 
 import path from 'path';
 import mongoose from 'mongoose';
+
 const app = express();
 dotenv.config();
 
-// Enable CORS for specific origin
+
 const corsOptions = {
   origin: 'http://localhost:5173',
 };
@@ -19,12 +20,17 @@ mongoose.connect("mongodb://127.0.0.1:27017/comic")
 
 app.use(cors(corsOptions));
 
+const __dirname = path.resolve();
+
+
+app.use('/upload', express.static(path.join(__dirname, '/upload')));
 
 app.use('/admin', adminRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
